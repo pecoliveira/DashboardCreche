@@ -3,7 +3,8 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Eye, EyeOff, LogIn, GraduationCap } from 'lucide-react';
+import Image from 'next/image';
+import { Eye, EyeOff, LogIn } from 'lucide-react';
 import { loginSchema, type LoginFormData } from '@/lib/validations';
 import { useAuth } from '@/contexts/AuthContext';
 
@@ -41,7 +42,7 @@ export default function LoginForm() {
       <div className="max-w-md w-full space-y-8">
         <div className="text-center">
           <div className="mx-auto h-16 w-16 bg-blue-500 rounded-full overflow-hidden">
-            <img src="/logo.png" alt="Logo" className="h-full w-full object-cover" /> 
+            <Image src="/logo.png" alt="Logo" width={64} height={64} className="h-full w-full object-cover" /> 
           </div>
           <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
             Creche Estrela do Oriente

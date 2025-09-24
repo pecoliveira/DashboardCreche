@@ -7,10 +7,9 @@ interface EditStudentModalProps {
   student: Student | null;
   isOpen: boolean;
   onClose: () => void;
-  onSuccess: () => void;
 }
 
-export default function EditStudentModal({ student, isOpen, onClose, onSuccess }: EditStudentModalProps) {
+export default function EditStudentModal({ student, isOpen, onClose }: EditStudentModalProps) {
   if (!isOpen || !student) return null;
 
   return (

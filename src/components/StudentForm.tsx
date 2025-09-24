@@ -36,7 +36,6 @@ export default function StudentForm() {
       const birthDate = new Date(birthYear, birthMonth - 1, birthDay);
       
       const [enrollYear, enrollMonth, enrollDay] = data.enrollmentDate.split('-').map(Number);
-      const enrollmentDate = new Date(enrollYear, enrollMonth - 1, enrollDay);
       
       const age = calculateAge(birthDate);
 

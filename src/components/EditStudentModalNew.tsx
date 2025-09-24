@@ -64,11 +64,11 @@ export default function EditStudentModal({ student, isOpen, onClose, onSuccess }
   // Converter datas para string para os inputs
   const birthDate = student.birthDate instanceof Date 
     ? student.birthDate 
-    : (student.birthDate as any).toDate();
+    : (student.birthDate as Timestamp).toDate();
     
   const enrollmentDate = student.enrollmentDate instanceof Date 
     ? student.enrollmentDate 
-    : (student.enrollmentDate as any).toDate();
+    : (student.enrollmentDate as Timestamp).toDate();
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
