@@ -31,8 +31,8 @@ Sistema completo de gestão de matrículas para creches, desenvolvido com Next.j
 ### 1. Clone o repositório
 
 ```bash
-git clone <url-do-repositorio>
-cd dashboard-matricula-creche
+git clone https://github.com/pecoliveira/DashboardCreche.git
+cd DashboardCreche
 ```
 
 ### 2. Instale as dependências
