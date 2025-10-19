@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Eye, EyeOff, LogIn, GraduationCap } from 'lucide-react';
+import { Eye, EyeOff, LogIn } from 'lucide-react';
 import { loginSchema, type LoginFormData } from '@/lib/validations';
 import { useAuth } from '@/contexts/AuthContext';
 

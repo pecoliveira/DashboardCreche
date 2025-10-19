@@ -3,14 +3,13 @@
 import React from 'react';
 import { Student } from '@/types';
 
-interface EditStudentModalProps {
+interface EditStudentModalSimpleProps {
   student: Student | null;
   isOpen: boolean;
   onClose: () => void;
-  onSuccess: () => void;
 }
 
-export default function EditStudentModal({ student, isOpen, onClose, onSuccess }: EditStudentModalProps) {
+export default function EditStudentModalSimple({ student, isOpen, onClose }: EditStudentModalSimpleProps) {
   if (!isOpen || !student) return null;
 
   return (

@@ -43,11 +43,11 @@ export default function EditStudentModal({ student, isOpen, onClose, onSuccess }
       // Converter Timestamp para Date se necessário
       const birthDate = student.birthDate instanceof Date 
         ? student.birthDate 
-        : (student.birthDate as any).toDate();
+        : (student.birthDate as { toDate: () => Date }).toDate();
         
-      const enrollmentDate = student.enrollmentDate instanceof Date 
+      const enrollDate = student.enrollmentDate instanceof Date 
         ? student.enrollmentDate 
-        : (student.enrollmentDate as any).toDate();
+        : (student.enrollmentDate as { toDate: () => Date }).toDate();
 
       // Preencher o formulário com os dados do aluno
       reset({
@@ -61,7 +61,7 @@ export default function EditStudentModal({ student, isOpen, onClose, onSuccess }
         allergies: student.allergies?.join(', ') || '',
         emergencyContact: student.emergencyContact,
         emergencyPhone: student.emergencyPhone,
-        enrollmentDate: formatDateToInput(enrollmentDate),
+        enrollmentDate: formatDateToInput(enrollDate),
         status: student.status,
       });
     }

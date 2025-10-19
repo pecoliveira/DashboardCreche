@@ -5,7 +5,6 @@ import { useAuth } from '@/contexts/AuthContext';
 import { Student } from '@/types';
 import Navbar from '@/components/Navbar';
 import StudentList from '@/components/StudentList';
-import StudentForm from '@/components/StudentForm';
 import StudentFormComplete from '@/components/StudentFormComplete';
 import Reports from '@/components/Reports';
 import EditStudentModal from '@/components/EditStudentModal';
