@@ -6,6 +6,7 @@ import { Student } from '@/types';
 import Navbar from '@/components/Navbar';
 import StudentList from '@/components/StudentList';
 import StudentForm from '@/components/StudentForm';
+import StudentFormComplete from '@/components/StudentFormComplete';
 import Reports from '@/components/Reports';
 import EditStudentModal from '@/components/EditStudentModal';
 
@@ -39,7 +40,7 @@ export default function Dashboard() {
       case 'students':
         return <StudentList key={refreshStudents} onEditStudent={handleEditStudent} />;
       case 'register':
-        return <StudentForm />;
+        return <StudentFormComplete />;
       case 'reports':
         return <Reports />;
       default:
